@@ -45,10 +45,8 @@
 #     numList.append(int((-n + i)/2))
 #     n -= 1
 # print("Список: ", numList)
-# indexQuantity = int(
-#     input(f"Введите количество индексов чисел, произведение которых нужно найти в пределах от 1 до {len(numList)}: "))
 # indList = list(
-#     (input("Введите индекс(ы): ")).split(" "))
+#     (input(f"Введите индекс(ы) в пределах от 1 до {len(numList)}: ")).split(" "))
 # print("Индексы: ", indList)
 # mult = 1
 # for i in range(0, len(indList)):
