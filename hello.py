@@ -1,57 +1,63 @@
 # # Задача 1
 
-# dayNum = int(input("Введите день недели: "))
-# if (dayNum == 6 or dayNum == 7):
-#     print("Выходной")
-# else:
-#     print("Будний день")
+# n = int(input("Введите вещественное число: "))
+# b = n.split(".")
+# num = int(b[1])
+# sum = 0
+# print(b[1])
+# while num != 0:
+#     sum += num % 10
+#     num //= 10
+# print(sum)
 
 
 # # Задача 2
 
-# for x in range(0, 2):
-#     for y in range(0, 2):
-#         for z in range(0, 2):
-#             check = (not (x or y or z)) == ((not (x)) and not (y) and not (z))
-#             print(
-#                 f' {x}, {y}, {z} - не ({x} или {y} или {z}) =  (не {x} и не {y} и не {z})  - {check}')
+# n = int(input("Введите число: "))
+# factorial = []
+# num = 1
+# for i in range(1, n+1):
+#     num *= i
+#     factorial.append(num)
+# print(factorial)
 
 
 # # Задача 3
 
-# x = int(input("Введите Х: "))
-# y = int(input("Введите Y: "))
-# if (x > 0 and y > 0):
-#     print("1-ая четверть")
-# elif (x < 0 and y > 0):
-#     print("2-ая четверть")
-# elif (x < 0 and y < 0):
-#     print("3-я четверть")
-# else:
-#     print("4-ая четверть")
+# quantity = int(input("Введите количество чисел, которое будет указано: "))
+# numList = []
+# for i in range(1, quantity + 1):
+#     numbers = input(f"Введите {i}-е число: ")
+#     numList.append(float(numbers))
+# print("Введенные числа: ", numList)
+# sum = 0
+# for i in range(0, len(numList)):
+#     sum += numList[i]
+# print("Сумма введенных чисел: ", sum)
 
 
 # # Задача 4
 
-# quart = int(input("Введите номер четверти (от 1 до 4): "))
-# if quart == 1:
-#     print("Х и Y должны быть положительными")
-# elif quart == 2:
-#     print("Х - отрицательное, Y - положительное")
-# elif quart == 3:
-#     print("Х и Y должны быть отрицательными")
-# elif quart == 4:
-#     print("Х - положительное, Y - отрицательное")
-# else:
-#     print("Введите число от 1 до 4")
+# n = int(input("Введите число: "))
+# numList = []
+# indList = []
+# for i in range(-n, n + 1):
+#     numList.append(int((-n + i)/2))
+#     n -= 1
+# print("Список: ", numList)
+# indexQuantity = int(
+#     input(f"Введите количество индексов чисел, произведение которых нужно найти в пределах от 1 до {len(numList)}: "))
+# indList = list(
+#     (input("Введите индекс(ы): ")).split(" "))
+# print("Индексы: ", indList)
+# mult = 1
+# for i in range(0, len(indList)):
+#     mult *= int(numList[int(indList[i])])
+# print(f"Произведение чисел под индексами {indList} равна: {mult}")
 
+# # Задача 5 По-моему читерски выполнено, но что-то мне подсказывает, что вы и ожидали самообучение в гугле :D
 
-# # Задача 5
-
-# a = int(input("Введите X для первой координаты: "))
-# b = int(input("Введите Y для первой координаты: "))
-# c = int(input("Введите X для второй координаты: "))
-# d = int(input("Введите Y для второй координаты: "))
-# distance = float((((c-a)**2) + (d-b)**2)**(0.5))
-# fixedDistance = '{:.2f}'.format(distance)
-# print(fixedDistance)
+# import random
+# numList = list((input("Введите элементы списка через пробел: ")).split(" "))
+# random.shuffle(numList)
+# print(numList)
