@@ -1,61 +1,89 @@
 # # Задача 1
 
-# n = int(input("Введите вещественное число: "))
-# b = n.split(".")
-# num = int(b[1])
-# sum = 0
-# print(b[1])
-# while num != 0:
-#     sum += num % 10
-#     num //= 10
-# print(sum)
+# def func():
+#     sum = 0
+#     numList = list(input("Введите элементы списка: "))
+#     print(numList)
+#     for i in range(0, len(numList)-1):
+#         if (i % 2 != 0):
+#             sum += int(numList[i])
+#     print(sum)
+
+
+# func()
 
 
 # # Задача 2
 
-# n = int(input("Введите число: "))
-# factorial = []
-# num = 1
-# for i in range(1, n+1):
-#     num *= i
-#     factorial.append(num)
-# print(factorial)
+# def func():
+#     mult = 0
+#     newList = []
+#     numList = list(input("Введите элементы списка: "))
+#     print(numList)
+#     for i in range(0, (round(len(numList)//1.5))):
+#         mult = int(numList[i]) * ((int(numList[0 + len(numList) - 1 - i])))
+#         newList.append(mult)
+#     if ((len(numList) % 2) == 0):
+#         newList.pop()
+#     print(newList)
+
+
+# func()
 
 
 # # Задача 3
 
-# quantity = int(input("Введите количество чисел, которое будет указано: "))
-# numList = []
-# for i in range(1, quantity + 1):
-#     numbers = input(f"Введите {i}-е число: ")
-#     numList.append(float(numbers))
-# print("Введенные числа: ", numList)
-# sum = 0
-# for i in range(0, len(numList)):
-#     sum += numList[i]
-# print("Сумма введенных чисел: ", sum)
+# def func():
+#     floList = []
+#     numQuant = input("Введите количество элементов в списке: ")
+#     for i in range(1, int(numQuant) + 1):
+#         num = float(input(f"Введите {i}-e вещественнoe числo: "))
+#         floList.append(num)
+#         highest = floList[0]
+#         lowest = floList[0]
+#         if (num > highest):
+#             highest = num
+#         if (lowest > num):
+#             lowest = num
+#         dif = (highest % 1) - (lowest % 1)
+#     print(floList)
+#     print(dif)
+
+
+# func()
 
 
 # # Задача 4
 
-# n = int(input("Введите число: "))
+# def func():
+#     n = int(input("Введите число для перевода в двоичную систему: "))
+#     b = ''
+#     while n > 0:
+#         b += str(n % 2)
+#         n //= 2
+#     print(f"В двоичном виде будет: {b}")
+
+
+# func()
+
+
+# # Задача 5
+
+# def func(n):
+#     num = 1
+#     if n > 2:
+#         num = func(n-1) + func(n-2)
+#     return num
+
+
+# elem = int(input('Введите число: '))
 # numList = []
-# indList = []
-# for i in range(-n, n + 1):
-#     numList.append(int((-n + i)/2))
-#     n -= 1
-# print("Список: ", numList)
-# indList = list(
-#     (input(f"Введите индекс(ы) в пределах от 1 до {len(numList)}: ")).split(" "))
-# print("Индексы: ", indList)
-# mult = 1
-# for i in range(0, len(indList)):
-#     mult *= int(numList[int(indList[i])])
-# print(f"Произведение чисел под индексами {indList} равна: {mult}")
-
-# # Задача 5 По-моему читерски выполнено, но что-то мне подсказывает, что вы и ожидали самообучение в гугле :D
-
-# import random
-# numList = list((input("Введите элементы списка через пробел: ")).split(" "))
-# random.shuffle(numList)
-# print(numList)
+# newList = []
+# fstElem = [0]
+# for i in range(1, elem + 1):
+#     value = func(i)
+#     anVal = func(i) * (-1)**(i+1)
+#     numList.append(value)
+#     newList.append(anVal)
+#     revList = list(reversed(newList))
+# print(revList + fstElem + numList)
